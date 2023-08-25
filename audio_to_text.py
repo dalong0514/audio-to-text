@@ -6,5 +6,5 @@ inference_pipeline = pipeline(
     model='damo/speech_paraformer-large-vad-punc_asr_nat-zh-cn-16k-common-vocab8404-pytorch',
     model_revision="v1.2.4")
 
-rec_result = inference_pipeline(audio_in='/audio-to-text/AI-1.mp3')
+rec_result = inference_pipeline(audio_in='/audio-to-text/AI-1.wav')
 print(rec_result)
