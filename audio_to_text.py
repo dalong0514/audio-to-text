@@ -9,7 +9,7 @@ def audio_to_text():
         model='damo/speech_paraformer-large-vad-punc_asr_nat-zh-cn-16k-common-vocab8404-pytorch',
         output_dir='./output_dir')
 
-    rec_result = inference_pipeline(audio_in='https://forgpt.oss-cn-hangzhou.aliyuncs.com/20230731M2-Ultra-AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%96%B0%E5%B8%8C%E6%9C%9B.mp3?OSSAccessKeyId=LTAI4GHKoH2Z5txaWP3NpNTx&Expires=1699892994&Signature=cxjzvFS7TmpMB7Gk86yYkqC4w3s%3D')
+    rec_result = inference_pipeline(audio_in='https://forgpt.oss-cn-hangzhou.aliyuncs.com/20230803%E4%B8%8E%E5%90%B4%E6%80%BB%E6%B1%87%E6%8A%A5%E5%90%84%E4%B8%93%E4%B8%9A%E4%BD%9C%E4%B8%9A%E7%BA%BF%E6%A1%86%E6%9E%B6.mp3?OSSAccessKeyId=LTAI4GHKoH2Z5txaWP3NpNTx&Expires=1699898494&Signature=f5o0QK7oxeRjNBCA%2BASJpdXkj3I%3D')
 
 if __name__ == '__main__':
     start_time = time.time()
