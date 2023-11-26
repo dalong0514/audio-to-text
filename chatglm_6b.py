@@ -3,9 +3,12 @@ from modelscope import AutoTokenizer, AutoModel, snapshot_download
 
 
 def chatglm_text():
-    model_dir = snapshot_download("ZhipuAI/chatglm3-6b", revision = "v1.0.0")
+    model_dir = snapshot_download("ZhipuAI/chatglm3-6b", revision="v1.0.0")
     tokenizer = AutoTokenizer.from_pretrained(model_dir, trust_remote_code=True)
-    model = AutoModel.from_pretrained(model_dir, trust_remote_code=True).half().cuda()
+    
+    # Remove .half() and .cuda() for CPU compatibility
+    model = AutoModel.from_pretrained(model_dir, trust_remote_code=True).float()
+    
     model = model.eval()
     response, history = model.chat(tokenizer, "你好", history=[])
     print(response)
